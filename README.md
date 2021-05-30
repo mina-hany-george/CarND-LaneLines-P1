@@ -39,37 +39,37 @@ My pipeline consisted of 6 steps:
 1 - Read the image pixels for which you need to detect the lane lines.
 
 
-![alt_text][/writeup_images/solidWhiteRight.jpg]
+<img src="writeup_images/solidWhiteRight.jpg" width="480"/>
 
 
 2 - Convert the read image from RGB image to grayscale using cv2.cvtColor
 
 
-![alt_text][/writeup_images/gray_image.jpg]
+<img src="writeup_images/gray_image.jpg" width="480"/>
 
 
 3 - Apply Canny edge detection with kernel (5x5) to get the gradient image.
 
 
-![alt_text][/writeup_images/canny_image.jpg]
+<img src="writeup_images/canny_image.jpg" width="480"/>
 
 
 4 - Create a mask image with a polygon of 4 vertices to zero out region out of interest so that only the region of interest appears in the masked image
 
 
-![alt_text][/writeup_images/masked_image.jpg]
+<img src="writeup_images/masked_image.jpg" width="480"/>
 
 
 5 - Apply Hough transform on the masked image to find the lines detected in the image and draw those lines on the image.
 
 
-![alt_text][/writeup_images/hough_image.jpg]
+<img src="writeup_images/hough_image.jpg" width="480"/>
 
 
 6 - Combine the lines drawn on top of the input (RGB) image using cv2.addWeighted to get the final image.
 
 
-![alt_text][/writeup_images/combined_image.jpg]
+<img src="writeup_images/combined_image.jpg" width="480"/>
 
 
 Note : In order to draw lines on the left and right lanes, I modified the draw_lines() function and extrapolate the line by calculating the slope and intercept of the lines obtained from hough transformation.
